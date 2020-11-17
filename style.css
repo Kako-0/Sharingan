@@ -105,3 +105,25 @@ body{
 
     transform: rotate(90deg) skewY(-30deg) skewX(-20deg);
 }
+
+.tomoe2 {
+    position: relative;
+    z-index: 2;
+    left: 48px;
+    bottom: 71px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.tomoe3 {
+    position: relative;
+    z-index: 2;
+    right: 0px;
+    top: 80px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000000;
+}
