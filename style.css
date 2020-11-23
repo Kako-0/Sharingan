@@ -39,7 +39,7 @@ body{
     0%{
         transform: rotate(0deg);
     }
-    100%{
+    60%,100%{
         transform: rotate(-360deg);
     }
 }
@@ -47,6 +47,7 @@ body{
 .sharingan::before{
     content: '';
     position: absolute;
+    z-index: 3;
     
 
     width: 50px;
@@ -74,7 +75,7 @@ body{
         width: 25px;
         height: 25px;
         
-        background-color: transparent;
+        background-color: #df1818;;
     
         border: 12px solid #000000;
     
@@ -110,51 +111,91 @@ body{
     
 }
 
-.tomoe1:hover{
-
+.sharingan:hover .tomoe1{
+    height: 25px;
+    right: 55px;
+    top: 10px;
+    transform: rotate(-30deg);
 }
 @keyframes tomoe1{
-    50%{
-        right: 45px;
-
-        width: 45px;
-        height: 45px;
+    30%{
+        left: 12px;
+        bottom: 34px;
+        height: 25px;
+        transform: rotate(-75deg);
     }
-    70%{
-        right: 10px;
+    50%,100%{
+        transform: rotate(-110deg);
+        left: 0px;
+        bottom: 0px;
 
+    }
+    60%{
         width: 45px;
-        height: 45px;
+        right: -20px;
+        top: 10px;
+        transform: rotate(-30deg);
     }
 }
+
 
 .tomoe1::after{
     content: '';
     position: absolute;
     
-    right: 23px;
-    bottom: 10px;
-    width: 15px;
+    right: 22px;
+    bottom: 5px;
+    width: 15px; 
     height: 15px;
+    border-radius: 50%;
+ 
 
-    transform: rotate(30deg) skewX(30deg) skewY(30deg);
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    background-color: #000000;
-    border-top: 0px solid #000000;
+    transform: rotate(195deg) skewX(30deg) skewY(30deg);
+    
+    border-top: 25px solid #000000;
+
+    background-color: transparent;
 
     /*animation: tomoe1after 1.5s infinite;*/
 }
 
 
-.tomoe1:hover::after{
+.sharingan:hover .tomoe1::after{
+    right: 22px;
+    bottom: 13px;
+    width: 100px; 
+    height: 100px; 
 
+    transform: rotate(195deg) skewX(18deg) skewY(0deg);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 50%;
+
+    border-top: 25px solid #000000;
+
+    background-color: transparent;
+
+    opacity: 1;
 }
 
 @keyframes tomoe1after{
-    50%{
+    60%{
+        right: -15px;
+        bottom: 25px;
+        width: 100px; 
+        height: 100px; 
+    
+        transform: rotate(220deg) skewX(18deg) skewY(0deg);
+        border-top-left-radius: 40%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 50%;
+    
+        border-top: 25px solid #000000;
+    
+        background-color: transparent;
+    
 
     }
 }
@@ -168,25 +209,98 @@ body{
     height: 30px;
     border-radius: 50%;
     background-color: #000000;
+    /*animation: tomoe2 1.5s linear infinite;*/
+}
+
+@keyframes tomoe2{
+    30%{
+        left: 12px;
+        bottom: 34px;
+        height: 25px;
+        transform: rotate(-75deg);
+    }
+    50%,100%{
+        transform: rotate(-110deg);
+        left: 0px;
+        bottom: 0px;
+
+    }
+}
+
+.sharingan:hover .tomoe2{
+    transform: rotate(-110deg);
+    left: 0px;
+    bottom: 0px;
 }
 
 .tomoe2::after{
     content: '';
     position: absolute;
 
-    right: 0px;
-    bottom: 21px;
+    left: 26px;
+    top: -9px;
+    width: 15px; 
+    height: 15px; 
 
-    width: 15px;
-    height: 15px;
+    transform: rotate(-30deg) skewX(30deg) skewY(30deg);
+    border-radius: 50%;
 
-    transform: rotate(140deg) skewX(30deg) skewY(30deg);
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    background-color: #000000;
-    border-top: 0px solid #000000;
+    border-top: 25px solid #000000;
+
+    background-color: transparent;
+
+    /*animation: tomoe2after 1.5s infinite;*/
+}
+
+@keyframes tomoe2after{
+    30%{
+        width: 50px; 
+        height: 50px; 
+
+        transform: rotate(-10deg) skewX(18deg) skewY(0deg);
+        border-top-left-radius: 40%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 50%;
+
+        border-top: 25px solid #000000;
+
+        background-color: transparent;
+    }
+    50%,100%{
+        left: 30px;
+        top: -8px;
+        width: 95px; 
+        height: 95px; 
+
+        transform: rotate(-10deg) skewX(18deg) skewY(0deg) scaleY(1.2);
+        border-top-left-radius: 40%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 50%;
+
+        border-top: 25px solid #000000;
+
+        background-color: transparent;
+
+    }
+}
+
+.sharingan:hover .tomoe2::after{
+    left: 30px;
+    top: -8px;
+    width: 95px; 
+    height: 95px; 
+
+    transform: rotate(-10deg) skewX(18deg) skewY(0deg) scaleY(1.2);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 50%;
+
+    border-top: 25px solid #000000;
+
+    background-color: transparent;
 }
 
 .tomoe3 {
@@ -199,22 +313,43 @@ body{
     border-radius: 50%;
     background-color: #000000;
 }
+.sharingan:hover .tomoe3{
+    left: -20px;
+    transform: rotate(-70deg);
+    top: initial;
+}
 
 .tomoe3::after{
     content: '';
     position: absolute;
 
-    right: 4px;
-    bottom: -8px;
+    right: 10px;
+    bottom: -24px;
 
     width: 15px;
     height: 15px;
 
-    transform: rotate(-80deg) skewX(30deg) skewY(30deg);
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    background-color: #000000;
-    border-top: 0px solid #000000;
+    transform: rotate(80deg) skewX(30deg) skewY(30deg);
+    border-radius: 50%;
+    background-color:transparent;
+    border-top: 25px solid #000000;
+}
+
+.sharingan:hover .tomoe3::after{
+    right: 20px;
+    top: -5px;
+    width: 100px; 
+    height: 100px; 
+
+    transform: rotate(110deg) skewX(18deg) skewY(0deg);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 50%;
+
+    border-top: 25px solid #000000;
+
+    background-color: transparent;
+
+    opacity: 1;
 }
